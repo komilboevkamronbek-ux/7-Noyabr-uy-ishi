@@ -24,11 +24,25 @@
 # print(natija)
 
 #                   3-masala
-def find_top_three_numbers_sorted(data: list) -> list:
-    new = []
-    for i in data:
-        new.append(tuple(sorted(i[:3],reverse=True)))
-    return new
+# def find_top_three_numbers_sorted(data: list) -> list:
+#     new = []
+#     for i in data:
+#         new.append(tuple(sorted(i[:3],reverse=True)))
+#     return new
     
-data = [(10, 20, 30, 11), (5, 15), (40,), (7, 8, 50, 3)]
-print(find_top_three_numbers_sorted(data))
+# data = [(10, 20, 30, 11), (5, 15), (40,), (7, 8, 50, 3)]
+# print(find_top_three_numbers_sorted(data))
+
+#                   4-masala
+def calculate_painting_time(pattern: list) -> int:
+    vaqt = 0
+    for i in range(len(pattern)):
+        vaqt += 2
+        if pattern[i] != pattern[i-1]:
+            vaqt += 1
+    return vaqt
+        
+
+pattern =  ["Red", "Blue", "Red", "Blue", "Red"] 
+natija = calculate_painting_time(pattern)
+print(natija)
