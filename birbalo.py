@@ -34,15 +34,33 @@
 # print(find_top_three_numbers_sorted(data))
 
 #                   4-masala
-def calculate_painting_time(pattern: list) -> int:
-    vaqt = 0
-    for i in range(len(pattern)):
-        vaqt += 2
-        if pattern[i] != pattern[i-1]:
-            vaqt += 1
-    return vaqt
+# def calculate_painting_time(pattern: list) -> int:
+#     vaqt = 0
+#     for i in range(len(pattern)):
+#         vaqt += 2
+#         if pattern[i] != pattern[i-1]:
+#             vaqt += 1
+#     return vaqt
         
 
-pattern =  ["Red", "Blue", "Red", "Blue", "Red"] 
-natija = calculate_painting_time(pattern)
+# pattern =  ["Red", "Blue", "Red", "Blue", "Red"] 
+# natija = calculate_painting_time(pattern)
+# print(natija)
+
+#                    5-masala
+def find_nearest_vowel(letter: str) -> str:
+    if letter.isalpha() and letter.islower():
+        yaqin = ""
+        kichik = 100
+        for i in "aeiou":
+            masofa = abs(ord(i) - ord(letter))
+            if masofa < kichik:
+                kichik = masofa
+                yaqin = i
+        return yaqin
+    else:
+        return "Faqat bitta kichik harf bo'lishi kerak"
+            
+
+natija = find_nearest_vowel(input(">>> "))
 print(natija)
