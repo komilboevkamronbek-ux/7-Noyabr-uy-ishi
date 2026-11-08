@@ -11,14 +11,24 @@
 # print(count_passing_students(lst, passing_grade))
 
 #                   2-masala
-def ends_with_gram(words: list[str]) -> list[str]:
-    new = []
-    for i in words:
-        if i.lower().endswith("gram"):
-            new.append(i)
-    return new        
+# def ends_with_gram(words: list[str]) -> list[str]:
+#     new = []
+#     for i in words:
+#         if i.lower().endswith("gram"):
+#             new.append(i)
+#     return new        
         
 
-lst = input(">>> ").split()
-natija = ends_with_gram(lst)
-print(natija)
+# lst = input(">>> ").split()
+# natija = ends_with_gram(lst)
+# print(natija)
+
+#                   3-masala
+def find_top_three_numbers_sorted(data: list) -> list:
+    new = []
+    for i in data:
+        new.append(tuple(sorted(i[:3],reverse=True)))
+    return new
+    
+data = [(10, 20, 30, 11), (5, 15), (40,), (7, 8, 50, 3)]
+print(find_top_three_numbers_sorted(data))
